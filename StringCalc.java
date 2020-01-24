@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class StringCalc {
    public static void main(String[]agrs){
    Scanner read = new Scanner(System.in);
-  
+     
    System.out.println("Введите выражене :");
         if (read.findInLine("\"(.*)\"([+])\"(.*)\"")
             != null){
@@ -22,7 +22,7 @@ public class StringCalc {
                String y = read.match().group(3);
                String z = read.match().group(2);
                String s = add (x,y,z);
-                if(s.length()<=40){
+                if((s.length()<=40)&(x.length()<11)&(y.length()<11)){
                    System.out.println(s);
                 }
                 else if (s.length()>40){
@@ -38,7 +38,7 @@ public class StringCalc {
                String y = read.match().group(3);
                String z = read.match().group(2);
                String s = sub (x,y,z);
-                if(s.length()<=40){
+                if((s.length()<=40)&(x.length()<11)&(y.length()<11)){
                    System.out.println(s);
                 }
                 else if (s.length()>40){
@@ -53,7 +53,7 @@ public class StringCalc {
                String y = read.match().group(3);               
                String z = read.match().group(2);
                String s = multi(x,y,z);
-                if(s.length()<=40){
+                if((s.length()<=40)&(x.length()<11)){
                    System.out.println(s);
                 }
                 else if (s.length()>40){
@@ -78,6 +78,7 @@ public class StringCalc {
                    System.out.println("Ошибка");
                    }
            }
+        else{System.out.println("Ошибка");}
    }
    
    public static String add( String x,String y, String z){
@@ -147,7 +148,7 @@ public class StringCalc {
         if(z.equals("/")){
         int one = x.length(); 
         int two = Integer.parseInt(y);
-            if(two>0){
+            if(one<11&two>0){
             int tree = one/two;
             System.out.println(x.substring(0,tree));
             }
