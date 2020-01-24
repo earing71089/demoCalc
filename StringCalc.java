@@ -96,7 +96,7 @@ public class StringCalc {
                     res=res.replaceFirst(uni, "");
                     }
                     else{
-                    res+=uni;}
+                    res=x;}
                 }
                 return res;
            }
@@ -104,7 +104,7 @@ public class StringCalc {
        
        
        else{   
-       return "Ошибка";}
+       return "";}
    }
    public static String multi(String x, String y, String z){
        if(z.equals("*")){
@@ -160,6 +160,6 @@ public class StringCalc {
     
         
         
-    return"Ошибка";
+    return"";
     }   
 }
