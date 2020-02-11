@@ -1,0 +1,136 @@
+
+package NewClalc;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Earring
+ */
+public class NewStringCalc {
+    public static void main(String[] agrs){
+    Scanner read = new Scanner(System.in);
+    
+    System.out.println("Введите выражение :");
+        if(read.findInLine("\"(.*)\"\\s?([+])\\s?\"(.*)\"")!=null){
+            String x = read.match().group(1);
+            String y = read.match().group(3);
+            String z = read.match().group(2);
+            String s = add(x,y,z);
+                if(s.length()<=40){
+                System.out.println(s);}
+                else{
+                System.out.println(s.substring(0,40) + "...");
+                }
+        }        
+        else if(read.findInLine("\"(.*)\"\\s?([*])\\s?(\\d*)")!=null){
+            String x = read.match().group(1);
+            String y = read.match().group(3);
+            String z = read.match().group(2);
+            String s = multi(x,y,z);
+                if(s.length()<=40){
+                System.out.println(s);}
+                else if(s.length()>40){
+                System.out.println(s.substring(0,40) + "...");
+                }
+                else{System.out.println("Ошибка");}
+        }
+         else if(read.findInLine("\"(.*)\"\\s?([/])\\s?(\\d*)")!=null){
+            String x = read.match().group(1);
+            String y = read.match().group(3);
+            String z = read.match().group(2);
+            String s = div(x,y,z);
+                if(s.length()<=40){
+                System.out.println(s);}
+                else if(s.length()>40){
+                System.out.println(s.substring(0,40) + "...");
+                }
+                else{System.out.println("Ошибка");}
+        }    
+        else if(read.findInLine("\"(.*)\"\\s?([-])\\s?\"(.*)\"")!=null){
+            String x = read.match().group(1);
+            String y = read.match().group(3);
+            String z = read.match().group(2);
+            String s = sub(x,y,z);
+                if(s.length()<=40){
+                System.out.println(s);}
+                else if(s.length()>40){
+                System.out.println(s.substring(0,40) + "...");
+                }
+                else{System.out.println("Ошибка");}
+        }    
+        else{
+            System.out.println("Ошибка");}
+    }
+    
+    public static String add(String x, String y, String z){
+        if(x.length()<11&y.length()<11){
+            return x+y;
+        }
+        else{System.out.println("Ошибка");}
+        return"Ответ";
+    }
+    public static String multi(String x, String y, String z){
+        if(y.equals("1")){
+        return x;}
+        else if(y.equals("2")){
+        return x+x;}
+        else if(y.equals("3")){
+        return x+x+x;}
+        else if(y.equals("4")){
+        return x+x+x+x;}
+        else if(y.equals("5")){
+        return x+x+x+x+x;}
+        else if(y.equals("6")){
+        return x+x+x+x+x+x;}
+        else if(y.equals("7")){
+        return x+x+x+x+x+x+x;}
+        else if(y.equals("8")){
+        return x+x+x+x+x+x+x+x;}
+        else if(y.equals("9")){
+        return x+x+x+x+x+x+x+x+x;}
+        else if(y.equals("10")){
+        return x+x+x+x+x+x+x+x+x+x;}
+        else{
+        System.out.println("Ошибка");}
+        return "Ответ";
+        
+        
+    }
+    public static String div(String x, String y, String z){
+        int one = x.length();
+        int two = Integer.parseInt(y);
+            if(two>0&two<11){
+            int tree = one/two;
+            System.out.println(x.substring(0,tree));}
+            else{
+            System.out.println("Ошибка");}
+        
+        
+        
+        return "Ответ";
+    }
+    public static String sub(String x, String y, String z){
+        if(y.length()<11){
+        String res = x;
+            for(int i = 0;i<y.length();i++){
+            String uni = y.substring(i,i+1);
+                if(x.contains(uni)){
+                    x=x.replaceFirst(uni, "");
+                    res=res.replaceFirst(uni, "");
+                    }
+                    else{
+                    res=x;}
+            }
+            return res;
+        
+        }
+        else{System.out.println("Ошибка");}
+        return"Ответ";
+        
+        
+        
+    }
+    
+    
+}
