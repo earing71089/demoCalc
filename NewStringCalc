@@ -18,9 +18,9 @@ public class NewStringCalc {
             String z = read.match().group(2);
             String s = add(x,y,z);
                 if(s.length()<=40){
-                System.out.println(s);}
+                System.out.println("\"" + s + "\"");}
                 else{
-                System.out.println(s.substring(0,40) + "...");
+                System.out.println("\"" + s.substring(0,40) + "..." +"\"");
                 }
         }        
         else if(read.findInLine("\"(.*)\"\\s?([*])\\s?(\\d*)")!=null){
@@ -29,9 +29,9 @@ public class NewStringCalc {
             String z = read.match().group(2);
             String s = multi(x,y,z);
                 if(s.length()<=40){
-                System.out.println(s);}
+                System.out.println("\"" + s + "\"");}
                 else if(s.length()>40){
-                System.out.println(s.substring(0,40) + "...");
+                System.out.println("\"" + s.substring(0,40) + "..." +"\"");
                 }
                 else{System.out.println("Ошибка");}
         }
@@ -41,9 +41,9 @@ public class NewStringCalc {
             String z = read.match().group(2);
             String s = div(x,y,z);
                 if(s.length()<=40){
-                System.out.println(s);}
+                System.out.println("\"" + s + "\"");}
                 else if(s.length()>40){
-                System.out.println(s.substring(0,40) + "...");
+                System.out.println("\"" + s.substring(0,40) + "..." +"\"");
                 }
                 else{System.out.println("Ошибка");}
         }    
@@ -53,9 +53,9 @@ public class NewStringCalc {
             String z = read.match().group(2);
             String s = sub(x,y,z);
                 if(s.length()<=40){
-                System.out.println(s);}
+                System.out.println("\"" + s + "\"");}
                 else if(s.length()>40){
-                System.out.println(s.substring(0,40) + "...");
+                System.out.println("\"" + s.substring(0,40) + "..." +"\"");
                 }
                 else{System.out.println("Ошибка");}
         }    
