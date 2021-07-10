@@ -6,48 +6,34 @@ public class NewCalculator {
         public static int addition(int x, int y) {
             if ((x > 0 & x < 11) & (y > 0 & y < 11)) {
                 return x + y;
+            } else {
+                return Integer.parseInt(null);
             }
-            return Integer.parseInt(null);
         }
 
         public static int substraction(int x, int y) {
             if ((x > 0 & x < 11) & (y > 0 & y < 11)) {
                 return x - y;
+            } else {
+                return Integer.parseInt(null);
             }
-            return Integer.parseInt(null);
         }
 
         public static int division(int x, int y) {
             if ((x > 0 & x < 11) & (y > 0 & y < 11)) {
                 return x / y;
+            } else {
+                return Integer.parseInt(null);
             }
-            return Integer.parseInt(null);
         }
 
         public static int multiplication(int x, int y) {
             if ((x > 0 & x < 11) & (y > 0 & y < 11)) {
                 return x * y;
+            } else {
+                return Integer.parseInt(null);
             }
-            return Integer.parseInt(null);
         }
-
-        public static int action(int x, int y, String operator) {
-            switch (operator) {
-                case "+":
-                    return addition(x, y);
-                case "-":
-                    return substraction(x, y);
-                case "/":
-                    return division(x, y);
-                case "*":
-                    return multiplication(x, y);
-                default:
-                    return Integer.parseInt(null);
-
-            }
-
-        }
-    }
 
 
     public static void main(String arg[]) {
