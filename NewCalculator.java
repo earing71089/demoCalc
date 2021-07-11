@@ -35,6 +35,24 @@ public class NewCalculator {
             }
         }
 
+        public static int action(int x, int y, String operator) {
+            switch (operator) {
+                case "+":
+                    return addition(x, y);
+                case "-":
+                    return substraction(x, y);
+                case "/":
+                    return division(x, y);
+                case "*":
+                    return multiplication(x, y);
+                default:
+                    return Integer.parseInt(null);
+
+            }
+
+        }
+    }
+
 
     public static void main(String arg[]) {
         Act myCalc = new Act();
