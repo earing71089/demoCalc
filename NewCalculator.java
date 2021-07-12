@@ -436,7 +436,7 @@ public class NewCalculator {
                 } else if (calc.equals("V-V")) {
                     System.out.println("В римских цифрах нет такого значения");
                 } else if (calc.equals("V*V")) {
-                    System.out.println("Ответ: 25 ");
+                    System.out.println("Ответ: XXV ");
                 } else if (calc.equals("V/V")) {
                     System.out.println("Ответ: I ");
                 } else if (calc.equals("V+VI")) {
