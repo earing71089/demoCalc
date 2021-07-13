@@ -19,7 +19,7 @@ public class NewCalculator {
             }
         }
 
-        public static int division(int x, int y) {
+        public static double division(int x, int y) {
             if ((x > 0 & x < 11) & (y > 0 & y < 11)) {
                 return x / y;
             } else {
@@ -35,7 +35,7 @@ public class NewCalculator {
             }
         }
 
-        public static int action(int x, int y, String operator) {
+        public static double action(int x, int y, String operator) {
             switch (operator) {
                 case "+":
                     return addition(x, y);
@@ -56,7 +56,7 @@ public class NewCalculator {
 
     public static void main(String arg[]) {
         Act myCalc = new Act();
-        int result = 0;
+        double result = 0;
         try (
                 Scanner calcScan = new Scanner(System.in);) {
 
@@ -73,7 +73,6 @@ public class NewCalculator {
 
                 } else {
                     System.out.println("Ошибка");
-
                 }
                 System.out.println("Ответ: " + result);
 
@@ -82,7 +81,7 @@ public class NewCalculator {
                 if (calc.equals("I+I")) {
                     System.out.println("Ответ: II ");
                 } else if (calc.equals("I-I")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("I*I")) {
                     System.out.println("Ответ: I ");
                 } else if (calc.equals("I/I")) {
@@ -170,7 +169,7 @@ public class NewCalculator {
                 } else if (calc.equals("II+II")) {
                     System.out.println("Ответ: IV ");
                 } else if (calc.equals("II-II")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("II*II")) {
                     System.out.println("Ответ: IV ");
                 } else if (calc.equals("II/II")) {
@@ -254,11 +253,11 @@ public class NewCalculator {
                 } else if (calc.equals("III*II")) {
                     System.out.println("Ответ: V ");
                 } else if (calc.equals("III/II")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("III+III")) {
                     System.out.println("Ответ: VI ");
                 } else if (calc.equals("III-III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("III*III")) {
                     System.out.println("Ответ: IX ");
                 } else if (calc.equals("III/III")) {
@@ -342,11 +341,11 @@ public class NewCalculator {
                 } else if (calc.equals("IV*III")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("IV/III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("IV+IV")) {
                     System.out.println("Ответ: VIII ");
                 } else if (calc.equals("IV-IV")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("IV*IV")) {
                     System.out.println("Ответ: XVI ");
                 } else if (calc.equals("IV/IV")) {
@@ -389,7 +388,7 @@ public class NewCalculator {
                     System.out.println("В римских цифрах нет такого значения");
                 } else if (calc.equals("IV*IX")) {
                     System.out.println("Ответ: XXXVI ");
-                } else if (calc.equals("IV/9")) {
+                } else if (calc.equals("IV/IX")) {
                     System.out.println("В римских цифрах нет такого значения");
                 } else if (calc.equals("IV+X")) {
                     System.out.println("Ответ: XIV");
@@ -414,7 +413,7 @@ public class NewCalculator {
                 } else if (calc.equals("V*II")) {
                     System.out.println("Ответ: X ");
                 } else if (calc.equals("V/II")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: II ");
                 } else if (calc.equals("V+III")) {
                     System.out.println("Ответ: VIII ");
                 } else if (calc.equals("V-III")) {
@@ -422,7 +421,7 @@ public class NewCalculator {
                 } else if (calc.equals("V*III")) {
                     System.out.println("Ответ: XV ");
                 } else if (calc.equals("V/III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("V+IV")) {
                     System.out.println("Ответ: IX ");
                 } else if (calc.equals("V-IV")) {
@@ -430,11 +429,11 @@ public class NewCalculator {
                 } else if (calc.equals("V*IV")) {
                     System.out.println("Ответ: XX ");
                 } else if (calc.equals("V/IV")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("V+V")) {
                     System.out.println("Ответ: X ");
                 } else if (calc.equals("V-V")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("V*V")) {
                     System.out.println("Ответ: XXV ");
                 } else if (calc.equals("V/V")) {
@@ -510,7 +509,7 @@ public class NewCalculator {
                 } else if (calc.equals("VI*IV")) {
                     System.out.println("Ответ: XXIV ");
                 } else if (calc.equals("VI/IV")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VI+V")) {
                     System.out.println("Ответ: XI ");
                 } else if (calc.equals("VI-V")) {
@@ -518,11 +517,11 @@ public class NewCalculator {
                 } else if (calc.equals("VI*V")) {
                     System.out.println("Ответ: XXX ");
                 } else if (calc.equals("VI/V")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VI+VI")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("VI-VI")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("VI*VI")) {
                     System.out.println("Ответ: XXXVI ");
                 } else if (calc.equals("VI/VI")) {
@@ -552,7 +551,7 @@ public class NewCalculator {
                 } else if (calc.equals("VI/IX")) {
                     System.out.println("В римских цифрах нет такого значения");
                 } else if (calc.equals("VI+X")) {
-                    System.out.println("Ответ: XVI");
+                    System.out.println("Ответ: XVI ");
                 } else if (calc.equals("VI-X")) {
                     System.out.println("В римских цифрах нет такого значения");
                 } else if (calc.equals("VI*X")) {
@@ -572,9 +571,9 @@ public class NewCalculator {
                 } else if (calc.equals("VII-II")) {
                     System.out.println("Ответ: V ");
                 } else if (calc.equals("VII*II")) {
-                    System.out.println("XIV");
+                    System.out.println("Ответ: XIV ");
                 } else if (calc.equals("VII/II")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: III ");
                 } else if (calc.equals("VII+III")) {
                     System.out.println("Ответ: X ");
                 } else if (calc.equals("VII-III")) {
@@ -582,7 +581,7 @@ public class NewCalculator {
                 } else if (calc.equals("VII*III")) {
                     System.out.println("Ответ: XXI ");
                 } else if (calc.equals("VII/III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: II ");
                 } else if (calc.equals("VII+IV")) {
                     System.out.println("Ответ: XI ");
                 } else if (calc.equals("VII-IV")) {
@@ -590,7 +589,7 @@ public class NewCalculator {
                 } else if (calc.equals("VII*IV")) {
                     System.out.println("Ответ: XXVIII ");
                 } else if (calc.equals("VII/IV")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VII+V")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("VII-V")) {
@@ -598,7 +597,7 @@ public class NewCalculator {
                 } else if (calc.equals("VII*V")) {
                     System.out.println("Ответ: XXXV");
                 } else if (calc.equals("VII/V")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VII+VI")) {
                     System.out.println("Ответ: XIV ");
                 } else if (calc.equals("VII-VI")) {
@@ -606,11 +605,11 @@ public class NewCalculator {
                 } else if (calc.equals("VII*VI")) {
                     System.out.println("Ответ: XLII ");
                 } else if (calc.equals("VII/VI")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VII+VII")) {
                     System.out.println("Ответ: XIV ");
                 } else if (calc.equals("VII-VII")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("VII*VII")) {
                     System.out.println("Ответ: XLIX ");
                 } else if (calc.equals("VII/VII")) {
@@ -662,7 +661,7 @@ public class NewCalculator {
                 } else if (calc.equals("VIII*III")) {
                     System.out.println("Ответ: XXIV ");
                 } else if (calc.equals("VIII/III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: II ");
                 } else if (calc.equals("VIII+IV")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("VIII-IV")) {
@@ -678,7 +677,7 @@ public class NewCalculator {
                 } else if (calc.equals("VIII*V")) {
                     System.out.println("Ответ: XXX ");
                 } else if (calc.equals("VIII/V")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VIII+VI")) {
                     System.out.println("Ответ: XIV ");
                 } else if (calc.equals("VIII-VI")) {
@@ -686,7 +685,7 @@ public class NewCalculator {
                 } else if (calc.equals("VIII*VI")) {
                     System.out.println("Ответ: XLVIII ");
                 } else if (calc.equals("VIII/VI")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VIII+VII")) {
                     System.out.println("Ответ: XV ");
                 } else if (calc.equals("VIII-VII")) {
@@ -694,11 +693,11 @@ public class NewCalculator {
                 } else if (calc.equals("VIII*VII")) {
                     System.out.println("Ответ: LVI ");
                 } else if (calc.equals("VIII/VII")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("VIII+VIII")) {
                     System.out.println("Ответ: XVI ");
                 } else if (calc.equals("VIII-VIII")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("VIII*VIII")) {
                     System.out.println("Ответ: LXIV ");
                 } else if (calc.equals("VIII/VIII")) {
@@ -734,7 +733,7 @@ public class NewCalculator {
                 } else if (calc.equals("IX*II")) {
                     System.out.println("Ответ: XVIII ");
                 } else if (calc.equals("IX/II")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: IV ");
                 } else if (calc.equals("IX+III")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("IX-III")) {
@@ -750,7 +749,7 @@ public class NewCalculator {
                 } else if (calc.equals("IX*IV")) {
                     System.out.println("XXXVI");
                 } else if (calc.equals("IX/IV")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: II ");
                 } else if (calc.equals("IX+V")) {
                     System.out.println("Ответ: XIV ");
                 } else if (calc.equals("IX-V")) {
@@ -758,7 +757,7 @@ public class NewCalculator {
                 } else if (calc.equals("IX*V")) {
                     System.out.println("Ответ: XLV ");
                 } else if (calc.equals("IX/V")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("IX+VI")) {
                     System.out.println("Ответ: XV ");
                 } else if (calc.equals("IX-VI")) {
@@ -766,7 +765,7 @@ public class NewCalculator {
                 } else if (calc.equals("IX*VI")) {
                     System.out.println("Ответ: XXXVI ");
                 } else if (calc.equals("IX/VI")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("IX+VII")) {
                     System.out.println("Ответ: XVI ");
                 } else if (calc.equals("IX-VII")) {
@@ -774,7 +773,7 @@ public class NewCalculator {
                 } else if (calc.equals("IX*VII")) {
                     System.out.println("Ответ: LIII ");
                 } else if (calc.equals("IX/VII")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("IX+VIII")) {
                     System.out.println("Ответ: XVII ");
                 } else if (calc.equals("IX-VIII")) {
@@ -782,11 +781,11 @@ public class NewCalculator {
                 } else if (calc.equals("IX*VIII")) {
                     System.out.println("Ответ: LXXII ");
                 } else if (calc.equals("IX/VIII")) {
-                    System.out.println("В римских цифрах нет такого значения ");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("IX+IX")) {
                     System.out.println("Ответ: XVIII ");
                 } else if (calc.equals("IX-IX")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("IX*IX")) {
                     System.out.println("Ответ: LXXXI ");
                 } else if (calc.equals("IX/IX")) {
@@ -810,7 +809,7 @@ public class NewCalculator {
                 } else if (calc.equals("X+II")) {
                     System.out.println("Ответ: XII ");
                 } else if (calc.equals("X-II")) {
-                    System.out.println("Ответ: VII ");
+                    System.out.println("Ответ: VIII ");
                 } else if (calc.equals("X*II")) {
                     System.out.println("Ответ: XX ");
                 } else if (calc.equals("X/II")) {
@@ -822,7 +821,7 @@ public class NewCalculator {
                 } else if (calc.equals("X*III")) {
                     System.out.println("Ответ: XXX ");
                 } else if (calc.equals("X/III")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: III ");
                 } else if (calc.equals("X+IV")) {
                     System.out.println("Ответ: XIV ");
                 } else if (calc.equals("X-IV")) {
@@ -830,11 +829,11 @@ public class NewCalculator {
                 } else if (calc.equals("X*IV")) {
                     System.out.println("Ответ: XL ");
                 } else if (calc.equals("X/IV")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: II ");
                 } else if (calc.equals("X+V")) {
                     System.out.println("Ответ: XV ");
                 } else if (calc.equals("X-V")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: V ");
                 } else if (calc.equals("X*V")) {
                     System.out.println("Ответ: L ");
                 } else if (calc.equals("X/V")) {
@@ -846,7 +845,7 @@ public class NewCalculator {
                 } else if (calc.equals("X*VI")) {
                     System.out.println("Ответ: LX ");
                 } else if (calc.equals("X/VI")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("X+VII")) {
                     System.out.println("Ответ: XVII ");
                 } else if (calc.equals("X-VII")) {
@@ -854,7 +853,7 @@ public class NewCalculator {
                 } else if (calc.equals("X*VII")) {
                     System.out.println("Ответ: LXX ");
                 } else if (calc.equals("X/VII")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("X+VIII")) {
                     System.out.println("Ответ: XVIII ");
                 } else if (calc.equals("X-8")) {
@@ -862,7 +861,7 @@ public class NewCalculator {
                 } else if (calc.equals("X*VIII")) {
                     System.out.println("Ответ: LXXX ");
                 } else if (calc.equals("X/VIII")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("X+IX")) {
                     System.out.println("Ответ: XIX ");
                 } else if (calc.equals("X-IX")) {
@@ -870,11 +869,11 @@ public class NewCalculator {
                 } else if (calc.equals("X*IX")) {
                     System.out.println("Ответ: XC ");
                 } else if (calc.equals("X/IX")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("Ответ: I ");
                 } else if (calc.equals("X+X")) {
                     System.out.println("Ответ: XX");
                 } else if (calc.equals("X-X")) {
-                    System.out.println("В римских цифрах нет такого значения");
+                    System.out.println("В системе римских цифр отсутствует ноль, но ранее использовалось обозначение нуля как nulla (нет), nihil (ничто) и N (первая буква этих слов)");
                 } else if (calc.equals("X*X")) {
                     System.out.println("Ответ: C ");
                 } else if (calc.equals("X/X")) {
